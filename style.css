@@ -1,0 +1,331 @@
+@media (prefers-color-scheme: dark) {
+  /* Dark theme styles go here */
+  body {
+    color: #fff;
+    background: #000;
+  }
+
+  h1.color-scheme {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  h2.color-scheme {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  p.color-scheme {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .logo path {
+    fill: #fff;
+  }
+
+  .section {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  /* Light theme styles go here */
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  h1.color-scheme {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  h2.color-scheme {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  p.color-scheme {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .logo path {
+    fill: #000;
+  }
+
+  .section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  /* background: #fff; */
+  /* color: black; */
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.text-and-button {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 4px 16px;
+  height: 28px;
+  color: #0A84FF;
+  border-radius: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #1C1C1E;
+}
+
+.content {
+  max-width: 450px;
+  margin: 10px;
+  /* padding: 64px 24px; */
+}
+
+.new-content {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .new-content {
+    display: block;
+    max-width: 450px;
+  }
+
+  .content {
+    margin: 0;
+  }
+}
+
+.section {
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+}
+.section:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.logo {
+  width: 160px;
+  height: 40px;
+  /* border-radius: 40px; */
+  margin-bottom: 12px;
+}
+
+
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255);
+}
+
+p {
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+p.small {
+  font-size: 14px;
+  line-height: 16px;
+  margin: 4px 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.link {
+  font-size: 16px;
+  line-height: 20px;
+  /* color: #fff; */
+  margin-right: 12px;
+}
+.links .link {
+  margin-right: 0;
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* h6 {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}*/
+
+h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+} 
+
+
+ul {
+  margin-top: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+ul li:last-of-type {
+  margin-bottom: 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* basico section */
+
+.basico-section {
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 20px;
+  /* max-width: 400px; */
+  margin-bottom: 20px;
+}
+
+.app-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 16px;
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+}
+
+/* espacio jam section */
+
+.ej-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #8D0000;
+  padding: 20px;
+  border-radius: 20px;
+  /* max-width: 400px; */
+  margin-bottom: 20px;
+  transition: transform 0.5s;
+
+}
+
+.ej-section:hover {
+  transform: scale(1.05);
+}
+
+.ej-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+}
+
+/* design engineering section */
+
+.de-section {
+  background-color: #5A0088;
+  padding: 20px;
+  border-radius: 20px;
+  /* max-width: 400px; */
+  margin-bottom: 20px;
+}
+
+/* ui section */
+
+.ui-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3A86FF;
+  padding: 20px;
+  border-radius: 20px;
+  width: 36%;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  transition: transform 0.5s;
+
+}
+
+.ui-section:hover {
+  transform: scale(1.05);
+}
+
+p.daily {
+  font-size: 28px;
+  line-height: 33px;
+  color: #fff;
+}
+
+p.ui {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 55px;
+  color: #fff;
+}
+
+/* highland section */
+
+.highland-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FF9500;
+  padding: 20px;
+  border-radius: 20px;
+  width: 64%;
+  margin-bottom: 20px;
+  transition: transform 0.5s;
+
+}
+
+.highland-section:hover {
+  transform: scale(1.05);
+}
+
+.highland-logo {
+  width: 80px;
+  height: 55px;
+  margin-bottom: 16px;
+}
