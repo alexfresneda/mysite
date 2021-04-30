@@ -101,17 +101,6 @@ a:hover {
   justify-content: space-between;
 }
 
-.button {
-  padding: 4px 16px;
-  height: 28px;
-  color: #0A84FF;
-  border-radius: 14px;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
-  background-color: #1C1C1E;
-}
-
 .content {
   width: 400px;
   /* max-width: 450px; */
@@ -247,6 +236,17 @@ ul li:last-of-type {
   border: 0.5px solid rgba(255, 255, 255, 0.12);
 }
 
+.basico-button {
+  padding: 4px 16px;
+  height: 28px;
+  color: #0A84FF;
+  border-radius: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #1C1C1E;
+}
+
 /* espacio jam section ------------------------------------------ */
 
 .ej-section {
@@ -280,6 +280,17 @@ ul li:last-of-type {
   border-radius: 20px;
   /* max-width: 400px; */
   margin-bottom: 20px;
+}
+
+.de-button {
+  padding: 4px 8px;
+  height: 28px;
+  color: #5A0088;
+  border-radius: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #fff;
 }
 
 /* ui section ------------------------------------------ */
