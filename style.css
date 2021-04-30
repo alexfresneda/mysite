@@ -17,6 +17,10 @@
     color: rgba(255, 255, 255, 0.6);
   }
 
+  p.prose {
+    color:rgba(255, 255, 255, 0.87)
+  }
+
   .logo path {
     fill: #fff;
   }
@@ -43,6 +47,10 @@
 
   p.color-scheme {
     color: rgba(0, 0, 0, 0.6);
+  }
+
+  p.prose {
+    color:rgba(0, 0, 0, 0.87)
   }
 
   .logo path {
@@ -88,11 +96,12 @@ body {
 
 a {
   color: inherit;
+  /* display: flex; */
 }
 
-a:hover {
+/* a:hover {
   text-decoration: underline;
-}
+} */
 
 .text-and-button {
   display: flex;
@@ -108,18 +117,25 @@ a:hover {
   /* padding: 64px 24px; */
 }
 
+.main-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
 .new-content {
   display: flex;
   flex-direction: row;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 64px 24px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   .new-content {
     display: block;
     max-width: 450px;
+    padding: 64px 24px;
   }
 
   .content {
@@ -221,7 +237,7 @@ ul li:last-of-type {
 /* basico section ------------------------------------------ */
 
 .basico-section {
-  background-color: #121212;
+  background-color: #1c1c1e;
   padding: 20px;
   border-radius: 20px;
   /* max-width: 400px; */
@@ -244,12 +260,12 @@ ul li:last-of-type {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
-  background-color: #1C1C1E;
+  background-color: #2C2C2E;
 }
 
 /* espacio jam section ------------------------------------------ */
 
-.ej-section {
+a.ej-section {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -295,7 +311,7 @@ ul li:last-of-type {
 
 /* ui section ------------------------------------------ */
 
-.ui-section {
+a.ui-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -328,7 +344,7 @@ p.ui {
 
 /* highland section ------------------------------------------ */
 
-.highland-section {
+a.highland-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -338,7 +354,6 @@ p.ui {
   width: 64%;
   margin-bottom: 20px;
   transition: transform 0.5s;
-
 }
 
 .highland-section:hover {
@@ -349,4 +364,18 @@ p.ui {
   width: 80px;
   height: 55px;
   margin-bottom: 16px;
+}
+
+/* project page styling -------------------------------------- */
+
+.project-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+p.prose {
+  font-size: 18px;
+  line-height: 26px;
+  
 }
