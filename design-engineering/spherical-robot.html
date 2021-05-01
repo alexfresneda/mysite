@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spherical robot</title>
+    <link rel="stylesheet" type="text/css" href="../project.css" />
+  </head>
+  <body>
+    <div class="project-content">
+      <a class="button" href="../index.html">← Home</a>
+      <h1>Spherical robot</h1>
+      <p>
+        This mechatronics project combined mechanics, software and electronics
+        to design a semi-autonomous spherical robot. The scenery of the project
+        was set around Mars, where our spherical robot performed a set of tasks
+        on a daily basis, which included checking a potato plantation and
+        a weather station on Mars. However, one day, one of our satellites
+        detected the presence of unknown beings landing on Mars and decided to
+        guide the spherical robot to the location of the aliens to try to learn
+        more about them...
+      </p>
+      <br /><br />
+      <h2>The Challenge</h2>
+      <p>
+        As part of the Mechatronics Design Project II at The University of
+        Bath my team was challenged to design and build a semi-autonomous
+        spherical robot. The project required the robot to be able to be
+        controlled manually from a laptop, navigate semi-autonomously using an
+        on-board JeVois camera and communicate via WiFi with a secondary robot.
+        With the aim of making the project more realistic, each team had to
+        design an event to be mitigated by the robot. In our case, the event
+        consisted in the landing of aliens on Mars.
+      </p>
+      <br /><br />
+      <h2>The Process</h2>
+      <p>
+        The design process was divided into 3 stages: ​<br /><br /><b
+          >Manual Drive.</b
+        ><br />For this stage, I programmed a Python script and a Simulink model
+        that allowed manual control of the spherical robot. The robot was driven
+        from the keyboard of a laptop and the signals were sent over wifi to
+        the onboard Arduino MKR1000. ​ <br /><br /><b>Autonomous Drive.</b
+        ><br />At this stage, the spherical robot was able to navigate
+        autonomously to the potato plantation and weather station, using
+        ArUco markers (similar to QR codes) as points of reference in a closed
+        environment. My role during this stage was to process the signals
+        received from an onboard JeVois camera and translate them into driving
+        commands using a Simulink model. <br /><br /><b
+          >Stellite Communications.</b
+        ><br />For the final stage, I modified the Simulink model to allow
+        bi-directional WiFi communication between the spherical robot and the
+        satellite. This way, the satellite, having identified the position of
+        the aliens, could direct the spherical robot towards them. ​
+      </p>
+      <br /><br />
+      <h2>Simulink Model</h2>
+      <p>
+        The Simulink model shown below was used to operate the robot manually,
+        autonomously and from the satellite. It contains a manual drive
+        controller, a 'black box' including all the image processing (which was
+        designed by another team member), WiFi receiver and sender to
+        communicate with the satellite, a Finite State Machine to translate the
+        robot's vision into motor commands and two motor controllers with
+        PID control. 
+      </p>
+      <br /><br />
+      <h2>From Image Processing...</h2>
+      <br /><br />
+      <h2>... to Drive Commands...</h2>
+      <p>
+        The Finite State Machine (FSM) below was designed to convert the
+        readings from the JeVois camera into drive commands. It was designed
+        using Simulink and embedded in the Arduino MKR1000 onboard of the
+        spherical robot. 
+      </p>
+      <br /><br />
+      <h2>... to Motor Signals...</h2>
+      <p>
+        The diagram below was part of the Simulink model embedded in the
+        spherical robot. It represents the FSM that read the driving commands
+        from the previous FSM and converted them into PWM signals to the
+        motors.   
+      </p>
+      <br /><br />
+      <h2>Navigation Sequence</h2>
+      <p>
+        Apart from the spherical robot, a satellite robot was designed. The
+        satellite consisted of a JeVois camera, an Arduino MKR1000 and a laser
+        mounted on a 2-axis turret. The purpose of the satellite was to detect
+        when the aliens landed and to use the laser to eliminate the aliens if
+        they were considered a danger. <br /><br />
+
+        1. While the robot is performing its fixed route between the weather
+        station and the plantation, the satellite detects two unidentified
+        aliens in the surroundings.​​​​​​ ​<br />
+
+        2. Having computed the distance from the robot to each alien, the
+        satellite interrupts the robot actions and directs it towards the
+        closest alien. ​​<br />
+
+        3. Once the desired distance to the target is achieved, the robot scans
+        the face of the alien. ​​<br />
+
+        4. If a bad alien is detected, the robot sends a signal to the
+        satellite, which triggers the elimination procedure – a laser pointed at
+        the alien. ​​<br />
+
+        5. The satellite then computes the quickest path to the second alien.
+        ​​<br />
+
+        6. If an obstacle is detected on the way of the quickest path, the
+        satellite designs an alternative path to avoid the obstacle (i.e. it
+        sends an alternative coordinate point). ​​<br />
+
+        7. Once the robot reaches the alternative point, the satellite checks
+        that the obstacle is no longer impeding the quickest route and the robot
+        can approach the second alien. ​​<br />
+
+        8. Once the desired distance to the second target is achieved, the robot
+        scans the face of the alien. ​​<br />
+
+        9. If a good alien is detected, the robot greets the alien with a
+        friendly dance.
+      </p>
+      <br /><br />
+      <h2>The Result</h2>
+      <p>
+        The robot designed managed to complete the entire navigation sequence
+        during the demo day at University and was awarded the highest grade in
+        the course.  
+      </p>
+    </div>
+  </body>
+</html>

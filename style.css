@@ -24,10 +24,6 @@
   .logo path {
     fill: #fff;
   }
-
-  .section {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -56,10 +52,6 @@
   .logo path {
     fill: #000;
   }
-
-  .section {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  }
 }
 
 * {
@@ -84,7 +76,7 @@ body {
 .social-icons {
   display: flex;
   flex-direction: row;
-  width: 30%;
+  width: 160px;
   justify-content: space-between;
   margin-top: 40px;
 }
@@ -96,7 +88,6 @@ body {
 
 a {
   color: inherit;
-  /* display: flex; */
 }
 
 /* a:hover {
@@ -144,25 +135,20 @@ a {
   }
 
   .social-icons {
-    /* margin-top: 20px; */
     margin-bottom: 40px;
   }
 }
 
 .section {
-  padding-bottom: 48px;
-  margin-bottom: 48px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.section:last-of-type {
+/* .section:last-of-type {
   border-bottom: 0;
   padding-bottom: 0;
   margin-bottom: 0;
-}
-/* .logo {
-  width: 160px;
-  height: 40px;
-  margin-bottom: 12px;
 } */
 
 
@@ -239,6 +225,7 @@ ul li:last-of-type {
 .basico-section {
   background-color: #1c1c1e;
   padding: 20px;
+  padding-bottom: 10px;
   border-radius: 20px;
   /* max-width: 400px; */
   margin-bottom: 20px;
@@ -253,7 +240,7 @@ ul li:last-of-type {
 }
 
 .basico-button {
-  padding: 4px 16px;
+  padding: 4px 12px;
   height: 28px;
   color: #0A84FF;
   border-radius: 14px;
@@ -261,6 +248,11 @@ ul li:last-of-type {
   font-size: 14px;
   font-weight: bold;
   background-color: #2C2C2E;
+  transition: transform 0.5s;
+}
+
+.basico-button:hover {
+  transform: scale(1.1);
 }
 
 /* espacio jam section ------------------------------------------ */
@@ -293,6 +285,7 @@ a.ej-section {
 .de-section {
   background-color: #5A0088;
   padding: 20px;
+  padding-bottom: 10px;
   border-radius: 20px;
   /* max-width: 400px; */
   margin-bottom: 20px;
@@ -307,8 +300,12 @@ a.ej-section {
   font-size: 14px;
   font-weight: bold;
   background-color: #fff;
+  transition: transform 0.5s;
 }
 
+.de-button:hover {
+  transform: scale(1.1);
+}
 /* ui section ------------------------------------------ */
 
 a.ui-section {
