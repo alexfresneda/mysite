@@ -34,7 +34,8 @@
         <div class="flex-column">
           <p><b>Skills</b></p>
           <p>
-            Design Optimisation, Data Analysis, Software Simulations, Aerodynamics Theory, Design of Experiments
+            Design Optimisation, Data Analysis, Software Simulations,
+            Aerodynamics Theory, Design of Experiments
           </p>
         </div>
         <div class="flex-column">
@@ -42,7 +43,7 @@
           <p>Autodesk Inventor, MATLAB, xfoil</p>
         </div>
       </div>
-      
+
       <h2>The Challenge</h2>
       <p>
         For the Design Optimisation course at The University of Bath, I was
@@ -52,7 +53,7 @@
         Labs and the performance would be evaluated in terms of Voltage, Current
         and Rotor Speed. 
       </p>
-      
+
       <h2>The Process</h2>
       <p>
         Initially, aerodynamic theory research was carried out to familiarise
@@ -64,7 +65,39 @@
         profile was selected to optimise performance for the given testing
         scenario. Following this, MATLAB was used to obtain the optimum
         dimensions of the blade using Blade Element Momentum Theory.
-        
+      </p>
+      <div class="asset-container">
+        <div class="flex-wrap">
+          <div class="flex-column">
+            <img
+              img
+              class="small"
+              src="../assets/des-opt/blade-nobg.png"
+              alt="A blade model without wrapping"
+            />
+            <p class="caption">Blade structure</p>
+          </div>
+          <div class="flex-column">
+            <img
+              class="small"
+              src="../assets/des-opt/rotor1.png"
+              alt="A rotor model"
+            />
+            <p class="caption">Rotor assembly</p>
+          </div>
+        </div>
+        <div class="flex-wrap">
+          <div class="flex-column">
+            <img
+              style="width: 100%"
+              src="../assets/des-opt/setup.png"
+              alt="A diagram of the experimental setup"
+            />
+            <p class="caption">Experimental setup</p>
+          </div>
+        </div>
+      </div>
+      <p>
         The results from the MATLAB simulations guided the design of the first
         set of blades. In order to validate the results from the simulations, a
         model of the rotor was built and tested. After testing the initial set,
@@ -73,7 +106,26 @@
         and modifying the simulations accordingly to approximate the MATLAB
         model to reality.
       </p>
-      
+
+      <p>
+        The flowchart below shows the optimisation path followed during the
+        project. Especial care was put into validating theoretical findings and
+        simulation results. 
+      </p>
+
+      <div class="asset-container">
+        <div class="flex-wrap">
+          <div class="flex-column">
+            <img
+             style="width:100%;"
+              src="../assets/des-opt/flowchart.png"
+              alt="A blade model without wrapping"
+            />
+            <p class="caption">Optimisation path flowchart</p>
+          </div>
+        </div>
+      </div>
+
       <h2>The Result</h2>
       <p>
         The final set of blades, which was built combining a laser-cut MDF
@@ -84,6 +136,34 @@
         of a thinner aerofoil and lightweight materials had a significant impact
         on performance. 
       </p>
+
+      <div class="asset-container">
+        <div class="flex-wrap">
+          <div class="flex-column">
+            <img
+              class="small"
+              src="../assets/des-opt/two-rotors.jpg"
+              alt="Two rotor models"
+            />
+            <p class="caption">The two rotors fabricated</p>
+          </div>
+          <div class="flex-column">
+            <img
+              class="small"
+              src="../assets/des-opt/blade-bg.jpg"
+              alt="A blade model without wrapping"
+            />
+            <p class="caption">Inner structure of the blades</p>
+          </div>
+        </div>
+        <div class="flex-column">
+        <video width="100%" controls>
+          <source src="../assets/des-opt/demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p class="caption">Turbine demo</p>
+      </div>
+      </div>
     </div>
   </body>
 </html>

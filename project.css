@@ -42,6 +42,12 @@
     background-color: rgba(255, 255, 255, 0.05);
   }
 
+  .asset-container {
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -81,6 +87,12 @@
   }
 
   .project-summary {
+    border-top: 1px dashed rgba(0, 0, 0, 0.2);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  .asset-container {
     border-top: 1px dashed rgba(0, 0, 0, 0.2);
     border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.02);
@@ -186,9 +198,9 @@ ul li:last-of-type {
 
 .de-button {
   padding: 4px 8px;
-  height: 38px;
-  border-radius: 19px;
-  font-size: 24px;
+  height: 28px;
+  border-radius: 14px;
+  font-size: 14px;
   font-weight: bold;
   transition: transform 0.5s;
 }
@@ -202,7 +214,7 @@ ul li:last-of-type {
 img.full-width {
   width: 100%;
   /* max-width: 800px; */
-  margin: 20px auto;
+  margin: 0 auto;
   /* height: 50vh; */
   object-fit: cover;
 }
@@ -250,6 +262,13 @@ img.small {
 .project-summary > .flex-column > p {
   font-size: 16px;
   opacity: 80%;
+}
+
+.asset-container {
+  margin: 0 -30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 40px;
 }
 
 
