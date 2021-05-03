@@ -213,16 +213,20 @@ ul li:last-of-type {
 
 img.full-width {
   width: 100%;
-  /* max-width: 800px; */
   margin: 0 auto;
-  /* height: 50vh; */
   object-fit: cover;
+  border-radius: 5px;
 }
 
 img.small {
   width: 100%;
   height: 240px;
   object-fit: cover;
+  border-radius: 5px;
+}
+
+video {
+  border-radius: 5px;
 }
 
 /*  LAYOUT -------------------------------- */
@@ -231,7 +235,7 @@ img.small {
   display: flex;
   flex-direction: row;
   /* justify-content: space-between; */
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .flex-column {
@@ -268,7 +272,7 @@ img.small {
   margin: 0 -30px;
   margin-top: 30px;
   margin-bottom: 30px;
-  padding: 30px;
+  padding: 30px 30px 20px 30px;
 }
 
 
@@ -277,8 +281,8 @@ img.small {
     flex-direction: column;
   }
 
-  /* .flex-column {
-    width: 100%;
-  } */
+  .flex-column {
+    margin-right: 0;
+  }
 
 }
