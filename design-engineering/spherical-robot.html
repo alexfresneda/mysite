@@ -21,7 +21,33 @@
         guide the spherical robot to the location of the aliens to try to learn
         more about them...
       </p>
-      <br /><br />
+
+      <div class="project-summary">
+        <div class="flex-column">
+          <p><b>Info</b></p>
+          <p>2019, 4 weeks, Team of 4</p>
+        </div>
+        <div class="flex-column">
+          <p><b>Role</b></p>
+          <p>Software Engineer</p>
+        </div>
+        <div class="flex-column">
+          <p><b>Context</b></p>
+          <p>Mechatronics II @ University of Bath</p>
+        </div>
+        <div class="flex-column">
+          <p><b>Skills</b></p>
+          <p>
+            Image Processing, Simulations, Testing, TCP/IP WiFi Communication,
+            Finite State Machines
+          </p>
+        </div>
+        <div class="flex-column">
+          <p><b>Tools</b></p>
+          <p>MATLAB, Simulink, Python, Arduino MKR1000</p>
+        </div>
+      </div>
+
       <h2>The Challenge</h2>
       <p>
         As part of the Mechatronics Design Project II at The University of
@@ -33,7 +59,7 @@
         design an event to be mitigated by the robot. In our case, the event
         consisted in the landing of aliens on Mars.
       </p>
-      <br /><br />
+
       <h2>The Process</h2>
       <p>
         The design process was divided into 3 stages: ​<br /><br /><b
@@ -48,13 +74,13 @@
         environment. My role during this stage was to process the signals
         received from an onboard JeVois camera and translate them into driving
         commands using a Simulink model. <br /><br /><b
-          >Stellite Communications.</b
+          >Satellite Communications.</b
         ><br />For the final stage, I modified the Simulink model to allow
         bi-directional WiFi communication between the spherical robot and the
         satellite. This way, the satellite, having identified the position of
         the aliens, could direct the spherical robot towards them. ​
       </p>
-      <br /><br />
+
       <h2>Simulink Model</h2>
       <p>
         The Simulink model shown below was used to operate the robot manually,
@@ -65,9 +91,55 @@
         robot's vision into motor commands and two motor controllers with
         PID control. 
       </p>
-      <br /><br />
+      <div class="margin-top-bottom">
+        <img
+          class="full-width"
+          src="../assets/spherical-robot/simulink-main.png"
+          alt="main simulink diagram"
+        />
+      </div>
+
       <h2>From Image Processing...</h2>
-      <br /><br />
+      <div class="margin-top-bottom">
+        <div class="flex-wrap">
+          <div class="flex-column">
+            <img
+              img
+              class="small"
+              src="../assets/spherical-robot/target-centred.png"
+              alt="arUco marker centred"
+            />
+            <p class="caption">Drive forward</p>
+          </div>
+          <div class="flex-column">
+            <img
+              class="small"
+              src="../assets/spherical-robot/target-left.png"
+              alt="arUco marker off-centre to the left"
+            />
+            <p class="caption">Turn left</p>
+          </div>
+        </div>
+        <div class="flex-wrap">
+          <div class="flex-column">
+            <img
+              class="small"
+              src="../assets/spherical-robot/target-right.png"
+              alt="arUco marker off-centre to the right"
+            />
+            <p class="caption">Turn right</p>
+          </div>
+          <div class="flex-column">
+            <img
+              class="small"
+              src="../assets/spherical-robot/target-stop.png"
+              alt="arUco marker centred and close"
+            />
+            <p class="caption">Stop</p>
+          </div>
+        </div>
+      </div>
+
       <h2>... to Drive Commands...</h2>
       <p>
         The Finite State Machine (FSM) below was designed to convert the
@@ -75,7 +147,15 @@
         using Simulink and embedded in the Arduino MKR1000 onboard of the
         spherical robot. 
       </p>
-      <br /><br />
+
+      <div class="margin-top-bottom">
+        <img
+          class="full-width"
+          src="../assets/spherical-robot/drive-fsm.png"
+          alt="simulink diagram of the finite state machine controlling drive commands"
+        />
+      </div>
+
       <h2>... to Motor Signals...</h2>
       <p>
         The diagram below was part of the Simulink model embedded in the
@@ -83,7 +163,15 @@
         from the previous FSM and converted them into PWM signals to the
         motors.   
       </p>
-      <br /><br />
+
+      <div class="margin-top-bottom">
+        <img
+          class="full-width"
+          src="../assets/spherical-robot/motor-signals-fsm.png"
+          alt="simulink diagram of the finite state machine controlling the motor signals"
+        />
+      </div>
+
       <h2>Navigation Sequence</h2>
       <p>
         Apart from the spherical robot, a satellite robot was designed. The
@@ -91,40 +179,54 @@
         mounted on a 2-axis turret. The purpose of the satellite was to detect
         when the aliens landed and to use the laser to eliminate the aliens if
         they were considered a danger. <br /><br />
-
+      </p>
+      <p class="caption">
         1. While the robot is performing its fixed route between the weather
         station and the plantation, the satellite detects two unidentified
-        aliens in the surroundings.​​​​​​ ​<br />
+        aliens in the surroundings.​​​​​​ ​<br /><br />
 
         2. Having computed the distance from the robot to each alien, the
         satellite interrupts the robot actions and directs it towards the
-        closest alien. ​​<br />
+        closest alien. ​​<br /><br />
 
         3. Once the desired distance to the target is achieved, the robot scans
-        the face of the alien. ​​<br />
+        the face of the alien. ​​<br /><br />
 
         4. If a bad alien is detected, the robot sends a signal to the
         satellite, which triggers the elimination procedure – a laser pointed at
-        the alien. ​​<br />
+        the alien. ​​<br /><br />
 
         5. The satellite then computes the quickest path to the second alien.
-        ​​<br />
+        ​​<br /><br />
 
         6. If an obstacle is detected on the way of the quickest path, the
         satellite designs an alternative path to avoid the obstacle (i.e. it
-        sends an alternative coordinate point). ​​<br />
+        sends an alternative coordinate point). ​​<br /><br />
 
         7. Once the robot reaches the alternative point, the satellite checks
         that the obstacle is no longer impeding the quickest route and the robot
-        can approach the second alien. ​​<br />
+        can approach the second alien. ​​<br /><br />
 
         8. Once the desired distance to the second target is achieved, the robot
-        scans the face of the alien. ​​<br />
+        scans the face of the alien. ​​<br /><br />
 
         9. If a good alien is detected, the robot greets the alien with a
         friendly dance.
       </p>
-      <br /><br />
+
+      <div class="margin-top-bottom">
+        <img
+          class="full-width"
+          src="../assets/spherical-robot/legend.png"
+          alt="legend of the navigation sequence"
+        />
+        <img
+          class="full-width"
+          src="../assets/spherical-robot/nav-sequence.jpg"
+          alt="diagram showing the navigation sequence of the robot"
+        />
+      </div>
+
       <h2>The Result</h2>
       <p>
         The robot designed managed to complete the entire navigation sequence
