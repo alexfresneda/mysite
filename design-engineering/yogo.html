@@ -12,19 +12,19 @@
       <a class="button" href="../index.html">← Home</a>
       <h1>Yogo</h1>
       <p>
-        MG ZS 4WD PHEV was a prototype hybrid vehicle designed and built from a
-        conventional SUV. The final product, fully designed, tested and built by
-        interns, improved the original vehicle’s efficiency by adding a 15-mile
-        range with zero emissions, as well as four-wheel drive (4WD) capability
-        to improve performance in adverse weather conditions. The vehicle
-        was able to regenerate electricity during braking and was charged by
-        plugging it to a domestic socket.
+        Yogo was a prototype yogurt vending machine that I designed and built as
+        part my Design Engineering Maters at the University of Bath. As a person
+        who eats snacks frequently, it always annoys me how vending machines
+        only offer unhealthy products. Not only this, they also fail to fill me
+        as much as I would expect them to. Based on that problem, I decided to
+        do my final year project on designing a vending machine that provides
+        healthier and nutritionally denser snacks.
       </p>
 
       <div class="project-summary">
         <div class="flex-column">
           <p><b>Info</b></p>
-          <p>2019 - 2020, 6 months</p>
+          <p>2019 - 2020, 4 months</p>
         </div>
         <div class="flex-column">
           <p><b>Role</b></p>
@@ -37,7 +37,8 @@
         <div class="flex-column">
           <p><b>Skills</b></p>
           <p>
-            User Research, Market Research, Concept Design, Prototyping, Software Engineering, Electrical Engineering, UI Design
+            User Research, Market Research, Concept Design, Prototyping,
+            Software Engineering, Electrical Engineering, UI Design
           </p>
         </div>
         <div class="flex-column">
@@ -45,42 +46,175 @@
           <p>MATLAB, Simulink, Arduino, 3D Printing, InVision Studio</p>
         </div>
       </div>
-      
+
       <h2>The Challenge</h2>
       <p>
-        Car manufacturers are more than ever looking into alternative and
-        greener solutions to reduce vehicle emissions to meet the targets
-        imposed by the new WLTP cycle. Executive Committee members of SAIC Motor
-        challenged a group of 10 interns to convert a conventional MG SUV into a
-        4WD Hybrid Vehicle. As Project Manager and Team Leader, I was
-        accountable for the final product. Due to the project scope being
-        purposely vague, we were responsible for developing our own
-        specification, which required in-depth research and benchmarking during
-        the initial phase. 
+        The main challenge was to find the perfect snack. I somehow convinced
+        over a hundred people to fill in a survey to understand more about
+        snacking habits. This was followed by a few face-to-face interviews to
+        dive deeper into questions that had come up from the survey. All this
+        research, combined with some market research and feasibility studies led
+        to my decision of building a yogurt vending machine. One of the key
+        findings was that people have quite varied snacking habits, in terms of
+        ingredients and portion size. So to conclude the research phase, I set
+        the target to design a vending machine that served yogurt that could be
+        customised with different toppings and sizes.
       </p>
-      
+
+      <div class="asset-container">
+        <div class="flex-column">
+          <img
+            class="full-width"
+            src="../assets/yogo/render.png"
+            alt="Two yogurts with fruit and cereal toppings"
+          />
+          <p class="caption">Concept snack based on user and market research</p>
+        </div>
+      </div>
+
       <h2>The Process</h2>
       <p>
-        The various challenges included modifying the rear suspension of the
-        vehicle to allow for a driven axle, design, purchase and packaging of
-        the electric powertrain and the control system. My role as Project
-        Manager consisted in overviewing the design process, ensuring that all
-        parts were designed, built and tested to match the quality expected
-        by the Executive Committee. Leading our team meetings, dealing with
-        suppliers and reporting on a regular basis to our stakeholders were also
-        my responsibilities.
+        The goal of the project was to build a functional prototype of the
+        machine. To start, I focused on the yogurt dispenser. This involved
+        research in the areas of packaging, storage and dispensing. Multiple
+        concepts and iterations were designed and the final choice was a rolling
+        pin that roll ed down using a lead-screw and squeezed the yogurt out of
+        a disposable plastic pouch.
       </p>
-      
+
+      <div class="asset-container">
+        <div class="flex-column">
+          <img
+            class="full-width"
+            src="../assets/yogo/prototype-render.png"
+            alt="Render of the prototype designed in CAD"
+          />
+          <p class="caption">
+            Render of the yogurt (left) and granola (right) dispensers, designed
+            in Fusion 360
+          </p>
+        </div>
+      </div>
+
+      <p>
+        I then moved on to designing the second subsystem: a granola dispenser.
+        For this, I designed an archimedes screw. The screw, subject to the
+        rotation of a stepper motor provided a great solution to dispense
+        granola accurately and continuously.<br /><br />Both subsystems were
+        designed in Fusion 360 and built with laser cut plywood and custom 3D
+        printed parts.
+      </p>
+      <div class="asset-container">
+        <div class="flex-column">
+          <img
+            class="full-width"
+            src="../assets/yogo/prototype.jpeg"
+            alt="A picture of the prototypes for the two subsystems and electronics"
+          />
+          <p class="caption">A picture of the two subsystems and electronics</p>
+        </div>
+      </div>
+      <p>
+        I used an Arduino Mega to control all sensors and actuators. Two
+        ultrasonic sensors were used to detect when a cup was placed under the
+        yogurt and granola dispensers. A load cell and an analogue to digital
+        converter voltage amplifier were used to detect the weight of the cup
+        and close the feedback loop. This allowed users to enter their desired
+        yogurt and granola amounts, and let the system do the rest.
+      </p>
+      <br /><br />
+      <p>
+        Unfortunately, the prototype couldn't be completed due to the closure of
+        the University's installations because of COVID19. As a result, a
+        conveyor belt couldn't be built to move the cup between the yogurt and
+        granola dispensers.
+      </p>
+
       <h2>The Result</h2>
       <p>
-        The final product improved the original vehicle’s efficiency by adding a
-        15-mile range with zero emissions, as well as 4WD capability to improve
-        performance in adverse weather conditions. The vehicle was able to
-        regenerate electricity during braking and could be charged by plugging
-        it to a domestic socket. The project was completed in time, under the
-        budget limit and created a great impression amongst the Executive
-        Committee members. 
+        The closure of the University less than 2 months into the project forced
+        me to change the plans for the month that we had left to complete the
+        project. Although I could still work on the software, I couldn't make
+        any improvements to the hardware at that point. Instead, I worked on a
+        concept design for the entire machine and a mobile app for users to
+        order their snacks from their phones. For the machine concept design, I
+        aimed to find the optimum layout for an optimised packaging of the
+        subsystems, taking into consideration things like refrigeration and
+        refilling of toppings.
       </p>
+
+      <div class="asset-container">
+        <div class="flex-column">
+          <img
+            class="full-width"
+            src="../assets/yogo/machine-render.png"
+            alt="A render of the entire vending machine"
+          />
+          <p class="caption">
+            The concept design for the vending machine was also created in
+            Fusion 360 and implemented the mechanisms designed for the
+            prototypes
+          </p>
+        </div>
+      </div>
+
+      <p>
+        Time constraints limited the amount of work I could put into the mobile
+        app. I had already created a basic GUI on Simulink to control the
+        prototype machine, so I decided to focus on designing the user interface
+        and experience. This was my first time designing a digital interface. I
+        did some user research with low-fidelity paper wireframes to investigate
+        different concepts for the interface. I then applied what I learnt from
+        user research and other design principles to a high fidelity prototype
+        using InVision Studio.
+      </p>
+
+      <div class="asset-container">
+        <div class="flex-column">
+          <img
+            class="full-width"
+            src="../assets/yogo/yog-size.gif"
+            alt="A gif of the app prototype"
+          />
+          <p class="caption">Selecting the yogurt size</p>
+        </div>
+        <div class="flex-column">
+          <img
+            class="full-width"
+            src="../assets/yogo/select-toppings.gif"
+            alt="A gif of the app prototype"
+          />
+          <p class="caption">Viewing the options for yogurt toppings</p>
+        </div>
+        <div class="flex-column">
+          <img
+            class="full-width"
+            src="../assets/yogo/pay.gif"
+            alt="A gif of the app prototype"
+          />
+          <p class="caption">
+            Paying for the yogurt and receiving confirmation
+          </p>
+        </div>
+      </div>
+
+      <p>
+        Overall, this project was a great experience, where I was able to apply
+        all my learning from the previous years at University. Being able to
+        combine hardware, software, electronics and design into a single
+        prototype was a great way of showcasing the skills I had gained while at
+        University.
+      </p>
+
+      <div class="asset-container">
+        <div class="flex-column">
+          <video width="100%" controls>
+            <source src="../assets/yogo/yogo-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p class="caption">Video of the final functional prototype</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
