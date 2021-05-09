@@ -82,7 +82,7 @@
   }
 
   a {
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: rgba(0, 0, 0, 0.06);
   }
 
   a:hover {
@@ -141,7 +141,7 @@ a {
   color: inherit;
   border-radius: 4px;
   padding: 0 2px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .section {
