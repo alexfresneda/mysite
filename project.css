@@ -23,6 +23,15 @@
     color: rgba(255, 255, 255, 0.6);
   }
 
+  a {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  a:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
   .section {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
@@ -47,7 +56,6 @@
     border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.05);
   }
-
 }
 
 @media (prefers-color-scheme: light) {
@@ -71,6 +79,15 @@
 
   p.caption {
     color: rgba(0, 0, 0, 0.6);
+  }
+
+  a {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  a:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .section {
@@ -97,7 +114,6 @@
     border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.02);
   }
-
 }
 
 * {
@@ -123,11 +139,10 @@ body {
 
 a {
   color: inherit;
+  border-radius: 4px;
+  padding: 0 2px;
+  font-weight: 500;
 }
-
-/* a:hover {
-  text-decoration: underline;
-} */
 
 .section {
   padding-bottom: 48px;
@@ -156,6 +171,7 @@ p {
   font-size: 18px;
   font-weight: 300;
   line-height: 26px;
+  letter-spacing: 0.2px;
 }
 
 p.caption {
@@ -192,8 +208,10 @@ ul li:last-of-type {
 
 .button {
   font-size: 16px;
-  line-height: 26px;
+  padding: 4px;
+  margin-left: -4px;
   color: #8b8b8b;
+  background-color: unset;
 }
 
 .de-button {
@@ -275,7 +293,6 @@ video {
   padding: 30px 30px 20px 30px;
 }
 
-
 @media only screen and (max-width: 800px) {
   .flex-wrap {
     flex-direction: column;
@@ -284,5 +301,4 @@ video {
   .flex-column {
     margin-right: 0;
   }
-
 }
