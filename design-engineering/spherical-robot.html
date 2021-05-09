@@ -12,7 +12,7 @@
       <a class="button" href="../index.html">← Home</a>
       <h1>Spherical robot</h1>
       <p>
-        This mechatronics project combined mechanics, software and electronics
+        This mechatronics project combined mechanics, software and electronics
         to design a semi-autonomous spherical robot. The scenery of the project
         was set around Mars, where our spherical robot performed a set of tasks
         on a daily basis, which included checking a potato plantation and
@@ -38,8 +38,8 @@
         <div class="flex-column">
           <p><b>Skills</b></p>
           <p>
-            Image Processing, Simulations, Testing, TCP/IP WiFi Communication,
-            Finite State Machines
+            Image Processing, Simulations, Testing, Wi-Fi Communication, Finite
+            State Machines
           </p>
         </div>
         <div class="flex-column">
@@ -52,33 +52,33 @@
       <p>
         As part of the Mechatronics Design Project II at The University of
         Bath my team was challenged to design and build a semi-autonomous
-        spherical robot. The project required the robot to be able to be
-        controlled manually from a laptop, navigate semi-autonomously using an
-        on-board JeVois camera and communicate via WiFi with a secondary robot.
-        With the aim of making the project more realistic, each team had to
-        design an event to be mitigated by the robot. In our case, the event
-        consisted in the landing of aliens on Mars.
+        spherical robot. The project required the robot to be controlled
+        manually from a laptop, navigate semi-autonomously using an on-board
+        JeVois camera and communicate via Wi-Fi with a secondary robot. With the
+        aim of making the project more realistic, each team had to design
+        an event to be mitigated by the robot. In our case, the event consisted
+        in the landing of aliens on Mars.
       </p>
 
       <h2>The Process</h2>
       <p>
         The design process was divided into 3 stages: ​<br /><br /><b
-          >Manual Drive.</b
-        ><br />For this stage, I programmed a Python script and a Simulink model
-        that allowed manual control of the spherical robot. The robot was driven
-        from the keyboard of a laptop and the signals were sent over wifi to
-        the onboard Arduino MKR1000. ​ <br /><br /><b>Autonomous Drive.</b
-        ><br />At this stage, the spherical robot was able to navigate
-        autonomously to the potato plantation and weather station, using
-        ArUco markers (similar to QR codes) as points of reference in a closed
-        environment. My role during this stage was to process the signals
-        received from an onboard JeVois camera and translate them into driving
-        commands using a Simulink model. <br /><br /><b
-          >Satellite Communications.</b
-        ><br />For the final stage, I modified the Simulink model to allow
-        bi-directional WiFi communication between the spherical robot and the
-        satellite. This way, the satellite, having identified the position of
-        the aliens, could direct the spherical robot towards them. ​
+          >Manual Drive</b
+        >
+        - For this stage, I programmed a Python script and a Simulink model that
+        allowed manual control of the spherical robot. The robot was driven from
+        the keyboard of a laptop and the signals were sent over Wi-Fi to
+        the onboard Arduino MKR1000. ​ <br /><br /><b>Autonomous Drive</b> - At
+        this stage, the spherical robot was able to navigate autonomously to the
+        potato plantation and weather station, using ArUco markers (similar to
+        QR codes) as points of reference in a closed environment. My role during
+        this stage was to process the signals received from an onboard JeVois
+        camera and translate them into driving commands using a Simulink
+        model. <br /><br /><b>Satellite Communications</b> - For the final
+        stage, I modified the Simulink model to allow bi-directional Wi-Fi
+        communication between the spherical robot and the satellite. This way,
+        the satellite, having identified the position of the aliens, could
+        direct the spherical robot towards them. ​
       </p>
 
       <h2>Simulink Model</h2>
@@ -86,7 +86,7 @@
         The Simulink model shown below was used to operate the robot manually,
         autonomously and from the satellite. It contains a manual drive
         controller, a 'black box' including all the image processing (which was
-        designed by another team member), WiFi receiver and sender to
+        designed by another team member), a Wi-Fi receiver and sender to
         communicate with the satellite, a Finite State Machine to translate the
         robot's vision into motor commands and two motor controllers with
         PID control. 
