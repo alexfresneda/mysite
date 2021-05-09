@@ -12,12 +12,17 @@
       <a class="button" href="index.html">← Home</a>
       <h1>Espacio Jam</h1>
       <p>
-        Highland Clothing was a clothing brand created along with a peer during
-        High School. With special focus on design and affordable prices,
-        Highland quickly gained attraction from students at our school. Within a
-        few months, the brand, solely advertised through social media and word
-        of mouth, expanded nationally and clothes were sold and sent all around
-        Spain, and even got the attention from international customers.
+        Espacio Jam is a Spanish podcast where their hosts, Guillermo García and
+        Antonio Vicent talk about basketball and movies. I've joined them a few
+        times to talk about the latest news in the NBA, but they're currently
+        focusing on promoting women's basketball in Spain through interviews
+        with professional players. They started recording towards the end of
+        2020, and early 2021 they decided they needed a website to showcase
+        their recordings and yet-to-be-written articles on both topics. Antonio
+        contacted me asking for recommendations about which website builder
+        would be the best option to use. Around that time, I had been thinking
+        about starting a small web project to learn the basics of React, so I
+        got back to Antonio and told him I would build the website for them.
       </p>
 
       <div class="project-summary">
@@ -35,46 +40,86 @@
         </div>
         <div class="flex-column">
           <p><b>Skills</b></p>
-          <p>
-            Responsive web design, web development, CMS
-          </p>
+          <p>Responsive web design, web development, CMS</p>
         </div>
         <div class="flex-column">
           <p><b>Tools</b></p>
           <p>Figma, React, HTML, CSS, CMS (Contentful), Github</p>
         </div>
       </div>
-      
+
       <h2>The Challenge</h2>
       <p>
-        Back in 2014, during High School, a friend and I realised the struggle
-        that was to get fashionable apparel for an affordable price. After
-        understanding that it was a common problem amongst students both at High
-        School and University, we decided to start our own clothing company. 
+        The biggest challenge was getting started. I hadn't done any web
+        development before, so there were a few challenges involving setting up
+        the React project. Luckily, I found a
+        <a href="https://basico.xyz">great video</a> explaining how to build a
+        basic react website step by step.
       </p>
-      
+      <br /><br />
+      <p>
+        The other main challenge was content management. Espacio Jam release 1
+        or 2 episodes per week, which means their hosts needed an easy way to
+        upload the latest episodes to the website. For that, I used Contentful
+        CMS to manage the content.
+      </p>
+
       <h2>The Process</h2>
       <p>
-        Start small, think big. With that moto in mind, we invested our own
-        savings into the company. The first steps involved the design of a
-        recognisable logo and a name. Finding a common theme that students
-        and young people in general would feel identified with was key: Freedom
-        & Skateboarding. We focused on designing different combinations of brand
-        name and logo with trendy colours and patterns. All our marketing effort
-        was put into Influencer Marketing, via Instagram and Facebook, with the
-        aim of targeting teenagers.
+        I started by drafting a few sketches on paper to investigate different
+        layout options. I then created a quick mockup on Figma to polish the
+        layout and component design. This also accelerated the process of
+        writing the CSS, thanks to the inspect panel on Figma. I was given full
+        freedom in terms of the branding for the site - the only asset Espacio
+        Jam had at the time was their logo. I must confess I didn't have much
+        experience on branding at the time, so I went for something simple,
+        clean and clear.
       </p>
-      
+      <div class="asset-container">
+        <img
+          class="full-width"
+          src="assets/espacio-jam/brand-guide.jpg"
+          alt="a screenshot of the brand guide for Espacio Jam"
+        />
+        <p class="caption">Simple brand guide used across the site</p>
+      </div>
+      <p>
+        When everyone was happy with the overall layout on Figma, it was time to
+        dive into VSCode and start building the site. Writing the code was
+        pretty straightforward. As I wasn't doing anything radically new, it was
+        easy to find solutions by doing a bit of googling (big thanks to the
+        stack overflow community 🙏). I particularly enjoyed the challenge of
+        making the site responsive to different screen sizes.
+      </p>
+
+      <div class="asset-container">
+        <img
+          class="full-width"
+          src="assets/espacio-jam/espaciojam-responsive.png"
+          alt="two screenshots of a desktop and a mobile showing Espacio Jam's website"
+        />
+        <p class="caption">Espacio Jam's website on desktop and mobile</p>
+      </div>
+
+      <p>
+        The final step was to fill the site with real content, which was pulled
+        from Contentful. There were two different CMS collections by type:
+        articles and episodes. Each collection was comprised of two categories:
+        movies and basketball. I had to make sure I displayed the right
+        information on each page. I created a GraphQL service to receive the
+        queries and get the collections from Contentful displayed on the site.
+      </p>
+
       <h2>The Result</h2>
       <p>
-        The simple and attractive design of our clothing line, which included
-        sweatshirts, hoodies, t-shirts and hats attracted lots of teenagers from
-        all around Spain. Less than a year after creating Highland Clothing, our
-        Instagram account had more than 2.5k followers and clothes were sold on
-        a daily basis. This project was a truly rewarding experience as it was
-        my first 'real-life' project. But most important were the learning
-        outcomes associated with starting my own business.
+        When I started this project, I didn't know how long it would take me to
+        complete it because everything was new to me. In the end, I spent 2-3
+        hours every evening over 3 weeks to finish the site. Looking back, it
+        all seems a lot easier than what it actually was, but it was a great
+        learning experience and I really enjoyed my first React project.
       </p>
+      <br /><br />
+      <a class="button" href="https://espaciojam.com">espaciojam.com →</a>
     </div>
   </body>
 </html>
