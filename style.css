@@ -114,7 +114,7 @@ body {
 .social-icons {
   display: flex;
   flex-direction: row;
-  width: 160px;
+  width: 120px;
   justify-content: space-between;
   margin-top: 40px;
 }
@@ -268,7 +268,7 @@ ul li:last-of-type {
 .button {
   border-radius: 4px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   padding: 2px;
   margin-left: -2px;
 }
@@ -305,6 +305,16 @@ ul li:last-of-type {
 
 .basico-button:hover {
   transform: scale(1.1);
+}
+
+.tag-label {
+  /* background-color: rgba(255, 155, 0, 1); */
+  color: rgba(255, 155, 0, 1);
+  /* border: 1px solid rgba(255, 155, 0, 1); */
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-left: 4px;
 }
 
 /* espacio jam section ------------------------------------------ */
