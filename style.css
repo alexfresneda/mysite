@@ -344,7 +344,7 @@ a.ej-section {
 /* design engineering section ------------------------------------------ */
 
 .de-section {
-  background-color: #7d7aff;
+  background-color: #5e5ce6;
   padding: 20px;
   padding-bottom: 10px;
   border-radius: 20px;
@@ -355,7 +355,7 @@ a.ej-section {
 .de-button {
   padding: 4px 8px;
   height: 28px;
-  color: #7d7aff;
+  color: #5e5ce6;
   border-radius: 14px;
   text-transform: uppercase;
   font-size: 14px;
@@ -373,7 +373,7 @@ a.ui-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0071a4;
+  background-color: #007aff;
   padding: 20px;
   border-radius: 20px;
   width: 36%;
@@ -405,7 +405,7 @@ a.highland-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffb340;
+  background-color: #ff9f0a;
   padding: 20px;
   border-radius: 20px;
   width: 64%;
