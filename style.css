@@ -373,7 +373,7 @@ a.ui-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #007aff;
+  background-color: #5ac8fa;
   padding: 20px;
   border-radius: 20px;
   width: 36%;
@@ -405,7 +405,7 @@ a.highland-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ff9f0a;
+  background-color: #ffcc00;
   padding: 20px;
   border-radius: 20px;
   width: 64%;
