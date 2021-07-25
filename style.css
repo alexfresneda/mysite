@@ -277,12 +277,54 @@ ul li:last-of-type {
   padding: 2px;
   margin-left: -2px;
 }
+/* backslash section ------------------------------------------ */
+a.backslash-section {
+  display: flex;
+  flex-direction: column;
+  background: #2ca58d;
+  padding: 20px;
+  /* padding-bottom: 10px; */
+  border-radius: 20px;
+  /* max-width: 400px; */
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.backslash-section:hover {
+  transform: scale(1.03);
+}
+
+/* .project-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.project {
+  display: flex;
+  width: 73.5px;
+  height: 73.5px;
+  align-items: center;
+}
+
+.project-logo {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-self: center;
+  transition: transform 0.3s;
+}
+
+.project-logo:hover {
+  transform: scale(1.1);
+} */
+
 /* basico section ------------------------------------------ */
 
 .basico-section {
   background-color: #1c1c1e;
   padding: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   border-radius: 20px;
   /* max-width: 400px; */
   margin-bottom: 20px;
@@ -351,7 +393,7 @@ a.ej-section {
 .de-section {
   background-color: #5e5ce6;
   padding: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   border-radius: 20px;
   /* max-width: 400px; */
   margin-bottom: 20px;
