@@ -259,6 +259,7 @@ ul li {
   margin-bottom: 10px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 ul li:last-of-type {
