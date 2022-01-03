@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Processing.JS inside Webpages: Template</title>
+  </head>
+  <body>
+    <!--This draws the canvas on the webpage -->
+    <div>
+      <!-- <canvas id="mycanvas1"></canvas> -->
+      <canvas id="mycanvas2"></canvas>
+    </div>
+  </body>
+
+  <!-- <style>
+    .flex-container {
+      display: flex;
+    }
+  </style> -->
+
+  <!-- Include the processing.js library -->
+  <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+  <script>
+    var programCode2 = function (processingInstance2) {
+      with (processingInstance2) {
+        var winW = 360;
+        var winH = 500;
+        size(winW, winH);
+        frameRate(60);
+        var plateX = 100;
+        var plateW = 100;
+        var plateH = 20;
+        var lives = 1;
+        var rowNo = 4;
+
+        var ellipseX = 200;
+        var ellipseY = 200;
+        var ellipseSize = 20;
+        // var speedAbs = 10;
+        var speedY = 5;
+        var speedX = -5;
+
+        // mouseOut = function () {
+        //   var pSpeedY = speedY;
+        //   var pSpeedX = speedX;
+        //   speedY = 0;
+        //   speedX = 0;
+        // };
+
+        // mouseOver = function () {
+        //   speedY = pSpeedY;
+        //   speedX = pSpeedX;
+        // };
+
+        var brickArray = [];
+        var bricks = [];
+        var brickH = 20;
+        var brickW = 40;
+
+        // create brick array
+        for (var i = 0; i < rowNo * (winW / brickW); i++) {
+          brickArray.push(1);
+          // println(brickArray);
+        }
+
+        // create all bricks
+        for (var j = 0; j < rowNo; j++) {
+          for (var i = 0; i < winW / brickW; i++) {
+            bricks.push({
+              brickX: 0 + brickW * i,
+              brickY: 0 + brickH * j,
+            });
+          }
+        }
+
+        var draw = function () {
+          background(0, 0, 0);
+          fill(255, 255, 255);
+
+          //draw bricks
+
+          for (var i = 0; i < bricks.length; i++) {
+            if (brickArray[i]) {
+              rect(bricks[i].brickX, bricks[i].brickY, brickW, brickH);
+            }
+          }
+
+          for (var i = 0; i < bricks.length; i++) {
+            if (brickArray[i]) {
+              //hit bottom
+              if (
+                ellipseY - ellipseSize / 2 === bricks[i].brickY + brickH &&
+                ellipseX > bricks[i].brickX &&
+                ellipseX < bricks[i].brickX + brickW
+              ) {
+                brickArray[i] = 0;
+                speedY = -speedY;
+              }
+              //hit top
+              if (
+                ellipseY + ellipseSize / 2 === bricks[i].brickY &&
+                ellipseX > bricks[i].brickX &&
+                ellipseX < bricks[i].brickX + brickW
+              ) {
+                brickArray[i] = 0;
+                speedY = -speedY;
+              }
+              //hit right
+              if (
+                ellipseX - ellipseSize / 2 === bricks[i].brickX + brickW &&
+                ellipseY > bricks[i].brickY &&
+                ellipseY < bricks[i].brickY + brickH
+              ) {
+                brickArray[i] = 0;
+                speedX = -speedX;
+              }
+              //hit left
+              if (
+                ellipseX + ellipseSize / 2 === bricks[i].brickX &&
+                ellipseY > bricks[i].brickY &&
+                ellipseY < bricks[i].brickY + brickH
+              ) {
+                brickArray[i] = 0;
+                speedX = -speedX;
+              }
+            }
+          }
+
+          //check for wall collision
+          if (ellipseY > winH - plateH * 2 - ellipseSize / 2) {
+            if (
+              ellipseX > mouseX - plateW / 2 &&
+              ellipseX < mouseX - plateW / 2 + plateW
+            ) {
+              speedY = -speedY;
+            }
+          }
+          if (ellipseY < ellipseSize / 2) {
+            speedY = -speedY;
+          }
+          if (ellipseX < ellipseSize / 2) {
+            speedX = -speedX;
+          }
+          if (ellipseX > winW - ellipseSize / 2) {
+            speedX = -speedX;
+          }
+
+          // move the ball
+          ellipseY += speedY;
+          ellipseX += speedX;
+
+          //   if (keyIsPressed && keyCode === RIGHT) {
+          //     xPos += 10;
+          //     fill(255);
+          //     text("right", 50, 50);
+          //   } else if (keyIsPressed && keyCode === LEFT) {
+          //     xPos -= 10;
+          //   }
+          ellipse(ellipseX, ellipseY, ellipseSize, ellipseSize);
+          rect(mouseX - plateW / 2, winH - plateH * 2, plateW, plateH);
+          //   rect(plateX, winH - plateH * 2, plateW, plateH);
+        };
+      }
+    };
+
+    // Get the canvas that ProcessingJS will use
+    var canvas2 = document.getElementById("mycanvas2");
+    // Pass the function to ProcessingJS constructor
+    var processingInstance2 = new Processing(canvas2, programCode2);
+  </script>
+</html>
