@@ -2,6 +2,36 @@
 
 body {
   background-color: #6700ff;
+  background-color: #6700ff;
+  opacity: 1;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #6700ff 20%,
+      #6700ff 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #6700ff 20%,
+        #6700ff 80%,
+        transparent 80%,
+        transparent
+      )
+      15px 15px,
+    linear-gradient(
+        #f500ff 1.2000000000000002px,
+        transparent 1.2000000000000002px
+      )
+      0 -0.6000000000000001px,
+    linear-gradient(
+        90deg,
+        #f500ff 1.2000000000000002px,
+        #6700ff 1.2000000000000002px
+      ) -0.6000000000000001px 0;
+  background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
 }
 
 h1 {
