@@ -2,18 +2,26 @@
 <html>
   <head>
     <title>Processing.JS inside Webpages: Template</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+    />
+    <link rel="stylesheet" type="text/css" href="arcade.css" />
   </head>
   <body>
     <!--This draws the canvas on the webpage -->
-    <div>
-      <!-- <canvas id="mycanvas1"></canvas> -->
-      <canvas id="mycanvas2"></canvas>
+    <div class="main-wrapper">
+      <div class="main-content">
+        <h1>BRICKBREAKER</h1>
+        <!-- <canvas id="mycanvas1"></canvas> -->
+        <canvas class="canvas" id="mycanvas2"></canvas>
+      </div>
     </div>
   </body>
 
   <!-- <style>
-    .flex-container {
-      display: flex;
+    .align-center {
+      justify-content: center;
     }
   </style> -->
 
@@ -23,8 +31,8 @@
   <script>
     var programCode2 = function (processingInstance2) {
       with (processingInstance2) {
-        var winW = 800;
-        var winH = 1000;
+        var winW = 600;
+        var winH = 600;
         size(winW, winH);
         frameRate(60);
         var plateX = 100;
@@ -56,6 +64,7 @@
         var bricks = [];
         var brickH = 20;
         var brickW = 40;
+        var brickColor = [];
 
         // create brick array
         for (var i = 0; i < rowNo * (winW / brickW); i++) {
@@ -69,21 +78,35 @@
             bricks.push({
               brickX: 0 + brickW * i,
               brickY: 0 + brickH * j,
+              colorR: 135 + 30 * j,
+              colorG: 0,
+              colorB: 255,
             });
           }
         }
 
+        // for (var i = 0; i < bricks.length; i++) {
+        //   brickColor.push({
+        //     colorR: random(0, 255),
+        //     colorG: random(0, 255),
+        //     colorB: random(0, 255),
+        //   });
+        // }
+
         var draw = function () {
           background(0, 0, 0);
-          fill(255, 255, 255);
+          // fill(255, 255, 255);
 
           //draw bricks
 
           for (var i = 0; i < bricks.length; i++) {
             if (brickArray[i]) {
+              fill(bricks[i].colorR, bricks[i].colorG, bricks[i].colorB);
               rect(bricks[i].brickX, bricks[i].brickY, brickW, brickH);
             }
           }
+
+          fill(255, 255, 255);
 
           for (var i = 0; i < bricks.length; i++) {
             if (brickArray[i]) {
