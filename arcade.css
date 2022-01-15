@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 
-body {
+body.brick-breaker {
   background-color: #6700ff;
   background-color: #6700ff;
   opacity: 1;
@@ -34,15 +34,48 @@ body {
   background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
 }
 
-h1 {
+h1.brick-breaker {
   font-family: "Press Start 2P", serif;
   color: white;
   font-size: 48px;
   text-shadow: -5px 5px 0px #f500ff;
 }
 
-.canvas {
+.canvas-brick-breaker {
   box-shadow: -10px 10px 0px #f500ff;
+  /* cursor: none; */
+}
+
+body.game-2 {
+  /* background-color: #3d5786;
+  background-color: #3d5786;
+  opacity: 1;
+  background-size: 120px 120px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #d7c82b 0,
+    #d7c82b 10px,
+    #3d5786 0,
+    #3d5786 50%
+  ); */
+  background: rgb(215, 200, 43);
+  background: linear-gradient(
+    0deg,
+    rgba(4, 171, 160, 1) 0%,
+    rgba(61, 87, 134, 1) 100%
+  );
+}
+
+h1.game-2 {
+  font-family: "Press Start 2P", serif;
+  color: #eb6782;
+  font-size: 48px;
+  text-shadow: -5px 5px 0px #d7c82b;
+}
+
+.canvas-game-2 {
+  box-shadow: -10px 10px 0px #d7c82b;
+  /* cursor: none; */
 }
 
 .main-wrapper {
@@ -55,5 +88,6 @@ h1 {
 .main-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: auto;
 }

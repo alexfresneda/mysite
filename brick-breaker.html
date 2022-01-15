@@ -8,15 +8,18 @@
     />
     <link rel="stylesheet" type="text/css" href="arcade.css" />
   </head>
-  <body>
+  <body class="brick-breaker">
     <!--This draws the canvas on the webpage -->
     <div class="main-wrapper">
       <div class="main-content">
-        <h1>BRICKBREAKER</h1>
+        <h1 class="brick-breaker">BRICKBREAKER</h1>
         <!-- <canvas id="mycanvas1"></canvas> -->
-        <canvas class="canvas" id="mycanvas2"></canvas>
+        <canvas class="canvas-brick-breaker" id="mycanvas2"></canvas>
       </div>
     </div>
+    <audio autoplay loop>
+      <source src="assets/arcade/dreaming.mp3" type="audio/mp3" />
+    </audio>
   </body>
 
   <!-- <style>
@@ -47,18 +50,22 @@
         // var speedAbs = 10;
         var speedY = 5;
         var speedX = -5;
+        var pSpeedY = speedY;
+        var pSpeedX = speedX;
+        //mouse pointer color
+        // var c = color(255, 255, 255, 0.5);
 
-        // mouseOut = function () {
-        //   var pSpeedY = speedY;
-        //   var pSpeedX = speedX;
-        //   speedY = 0;
-        //   speedX = 0;
-        // };
+        mouseOut = function () {
+          pSpeedY = speedY;
+          pSpeedX = speedX;
+          speedY = 0;
+          speedX = 0;
+        };
 
-        // mouseOver = function () {
-        //   speedY = pSpeedY;
-        //   speedX = pSpeedX;
-        // };
+        mouseOver = function () {
+          speedY = pSpeedY;
+          speedX = pSpeedX;
+        };
 
         var brickArray = [];
         var bricks = [];
@@ -105,6 +112,13 @@
               rect(bricks[i].brickX, bricks[i].brickY, brickW, brickH);
             }
           }
+
+          //mouse pointer
+          // noFill();
+          // stroke(c);
+          // strokeWeight(2);
+          // ellipse(mouseX, mouseY, 10, 10);
+          // noStroke();
 
           fill(255, 255, 255);
 
