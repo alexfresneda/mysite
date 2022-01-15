@@ -484,3 +484,38 @@ p.prose {
   font-size: 18px;
   line-height: 26px;
 }
+
+/* arcade tile styling ------------------------------------ */
+h1.arcade {
+  font-family: "Press Start 2P", serif;
+  color: #295ba7;
+  font-size: 28px;
+  /* text-shadow: -2px 2px 0px #d7c82b; */
+  letter-spacing: 0.15em;
+  line-height: 34px;
+  /* margin-left: 15px;
+  margin-top: 15px; */
+}
+
+.arcade-section {
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start; */
+  background-color: #04aba0;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+a.arcade-link {
+  font-family: "Press Start 2P", serif;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  color: #ffffff;
+}
+a.arcade-link:hover {
+  color: #04aba0;
+  background-color: #ffffff;
+}

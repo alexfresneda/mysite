@@ -12,20 +12,17 @@
     <!--This draws the canvas on the webpage -->
     <div class="main-wrapper">
       <div class="main-content">
-        <h1 class="game-2">WALL AVOID</h1>
+        <h1 class="wall-avoider">WALL AVOIDER</h1>
         <!-- <canvas id="mycanvas1"></canvas> -->
         <canvas class="canvas-game-2" id="mycanvas1"></canvas>
+        <audio style="margin-top: 40px" autoplay loop>
+          <source
+            src="assets/arcade/intergalactic-odyssey.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
       </div>
     </div>
-    <iframe
-      src="silence.mp3"
-      allow="autoplay"
-      id="audio"
-      style="display: none"
-    ></iframe>
-    <audio autoplay loop>
-      <source src="assets/arcade/intergalactic-odyssey.mp3" type="audio/mpeg" />
-    </audio>
   </body>
 
   <!-- <style>
@@ -66,14 +63,14 @@
         }
 
         draw = function () {
-          background(0, 0, 0);
+          background(235, 103, 130);
 
           //   while (rectY < 401) {
           for (var i = 0; i < lines.length; i++) {
             // stroke(51, 255, 51);
             // noFill();
             // strokeWeight(2);
-            fill(235, 103, 130);
+            fill(41, 91, 167);
             rect(
               lines[i].leftRectX,
               lines[i].rectY,
@@ -89,7 +86,7 @@
             lines[i].rectY += speed;
 
             noStroke();
-            fill(0, 0, 0);
+            fill(235, 103, 130);
             rect(0, 0, winW, 50);
             fill(255, 255, 255);
             ellipse(mouseX, winH - 50, 30, 30);
